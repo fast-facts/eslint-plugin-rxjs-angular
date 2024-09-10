@@ -4,31 +4,31 @@
     "url": "https://github.com/cartant/eslint-plugin-rxjs-angular/issues"
   },
   "dependencies": {
-    "@typescript-eslint/utils": "^8.0.0",
-    "common-tags": "^1.8.0",
+    "@typescript-eslint/utils": "^8.5.0",
+    "common-tags": "^1.8.2",
     "requireindex": "~1.2.0",
-    "rxjs": "^7.0.0",
+    "rxjs": "^7.8.1",
     "tslib": "^2.7.0",
-    "tsutils": "^3.0.0",
-    "tsutils-etc": "^1.4.1"
+    "tsutils": "^3.21.0",
+    "tsutils-etc": "^1.4.2"
   },
   "description": "ESLint rules for RxJS and Angular",
   "devDependencies": {
-    "@eslint/eslintrc": "^3.0.0",
-    "@eslint/js": "^9.0.0",
-    "@types/chai": "^4.2.0",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.10.0",
+    "@types/chai": "^4.3.19",
     "@types/common-tags": "^1.8.4",
-    "@types/eslint": "^9.0.0",
+    "@types/eslint": "^9.6.1",
     "@types/mocha": "^10.0.7",
     "@types/node": "^22.5.4",
-    "@typescript-eslint/parser": "^8.0.0",
-    "@typescript-eslint/rule-tester": "^8.0.0",
-    "chai": "^4.2.0",
-    "eslint": "^9.0.0",
+    "@typescript-eslint/parser": "^8.5.0",
+    "@typescript-eslint/rule-tester": "^8.5.0",
+    "chai": "^4.5.0",
+    "eslint": "^9.10.0",
     "mocha": "^10.7.3",
     "ts-node": "^10.9.2",
     "typescript": "~5.6.2",
-    "typescript-eslint": "^8.0.0"
+    "typescript-eslint": "^8.5.0"
   },
   "files": [
     "dist",
