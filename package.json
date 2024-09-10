@@ -16,7 +16,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.0",
     "@eslint/js": "^9.0.0",
-    "@types/chai": "^4.2.0",
+    "@types/chai": "^4.3.19",
     "@types/common-tags": "^1.8.4",
     "@types/eslint": "^9.0.0",
     "@types/mocha": "^10.0.7",
