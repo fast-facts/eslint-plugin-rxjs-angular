@@ -4,8 +4,8 @@
  */
 
 import { stripIndent } from "common-tags";
-import { fromFixture } from "eslint-etc";
-import rule = require("../../source/rules/prefer-composition");
+import { fromFixture } from "../../source/etc";
+import * as rule from "../../source/rules/prefer-composition";
 import { ruleTester } from "../utils";
 
 ruleTester({ types: true }).run("prefer-composition", rule, {

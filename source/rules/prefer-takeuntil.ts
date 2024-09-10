@@ -3,10 +3,7 @@
  * can be found in the LICENSE file at https://github.com/cartant/eslint-plugin-rxjs-angular
  */
 
-import {
-  TSESLint,
-  TSESTree as es,
-} from "@typescript-eslint/experimental-utils";
+import { TSESLint, TSESTree as es } from "@typescript-eslint/utils";
 import { stripIndent } from "common-tags";
 import {
   getTypeServices,
@@ -14,7 +11,7 @@ import {
   isIdentifier,
   isMemberExpression,
   isThisExpression,
-} from "eslint-etc";
+} from "../etc";
 import { ruleCreator } from "../utils";
 
 const messages = {
@@ -242,6 +239,7 @@ const rule = ruleCreator({
     function checkSubjectProperty(name: string, entry: Entry) {
       const { propertyDefinitions } = entry;
       const propertyDefinition = propertyDefinitions.find(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (propertyDefinition: any) => propertyDefinition.key.name === name
       );
       return Boolean(propertyDefinition);
@@ -291,9 +289,11 @@ const rule = ruleCreator({
     }
 
     function hasDecorator(node: es.ClassDeclaration) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const { decorators } = node as any;
       return (
         decorators &&
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         decorators.some((decorator: any) => {
           const { expression } = decorator;
           if (!isCallExpression(expression)) {

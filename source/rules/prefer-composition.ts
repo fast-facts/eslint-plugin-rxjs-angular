@@ -3,7 +3,7 @@
  * can be found in the LICENSE file at https://github.com/cartant/eslint-plugin-rxjs-angular
  */
 
-import { TSESTree as es } from "@typescript-eslint/experimental-utils";
+import { TSESTree as es } from "@typescript-eslint/utils";
 import { stripIndent } from "common-tags";
 import {
   getParent,
@@ -13,14 +13,20 @@ import {
   isIdentifier,
   isMemberExpression,
   isVariableDeclarator,
-} from "eslint-etc";
+} from "../etc";
 import { ruleCreator } from "../utils";
 
 const defaultOptions: readonly {
   checkDecorators?: string[];
 }[] = [];
 
-const rule = ruleCreator({
+type MessageIds =
+  | "notComposed"
+  | "notDeclared"
+  | "notImplemented"
+  | "notUnsubscribed";
+
+const rule = ruleCreator<typeof defaultOptions, MessageIds>({
   defaultOptions,
   meta: {
     docs: {
@@ -107,6 +113,7 @@ const rule = ruleCreator({
 
       subscriptions.forEach((subscription) => {
         const propertyDefinition = propertyDefinitions.find(
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (propertyDefinition: any) =>
             propertyDefinition.key.name === subscription
         );
@@ -164,9 +171,11 @@ const rule = ruleCreator({
     }
 
     function hasDecorator(node: es.ClassDeclaration) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const { decorators } = node as any;
       return (
         decorators &&
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         decorators.some((decorator: any) => {
           const { expression } = decorator;
           if (!isCallExpression(expression)) {

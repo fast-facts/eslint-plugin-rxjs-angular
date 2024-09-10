@@ -3,6 +3,6 @@
  * can be found in the LICENSE file at https://github.com/cartant/eslint-plugin-rxjs-angular
  */
 
-import { createRuleTester } from "eslint-etc";
+import { createRuleTester } from "../source/etc";
 
-export const ruleTester = createRuleTester({});
+export const ruleTester = createRuleTester();
