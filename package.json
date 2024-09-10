@@ -23,7 +23,7 @@
     "@types/node": "^22.5.4",
     "@typescript-eslint/parser": "^8.5.0",
     "@typescript-eslint/rule-tester": "^8.5.0",
-    "chai": "^4.5.0",
+    "chai": "^5.1.1",
     "eslint": "^9.10.0",
     "mocha": "^10.7.3",
     "ts-node": "^10.9.2",
