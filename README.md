@@ -1,5 +1,5 @@
 
-This repo is solely meant to updated cartant's [eslint-plugin-rxjs-angular](https://github.com/cartant/eslint-plugin-rxjs-angular) package to be compatible with eslint v9.
+This repo is solely meant to update cartant's [eslint-plugin-rxjs-angular](https://github.com/cartant/eslint-plugin-rxjs-angular) package to be compatible with eslint v9.
 
 PRs will not be accepted for new features or bug fixes. Reach out to the original maintainer.
 
